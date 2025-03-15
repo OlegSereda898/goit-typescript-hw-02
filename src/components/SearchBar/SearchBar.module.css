@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4e75ff;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #242424;
+  border-radius: 4px;
+  width: 360px;
+  height: 46px;
+}
+
+.button {
+  background-color: #242424;
+}
+
+.button:focus,
+.button:hover {
+  border: none;
+  outline: none;
+}
+
+.input {
+  border: none;
+  width: 360px;
+  height: 44px;
+  background-color: #242424;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+}
