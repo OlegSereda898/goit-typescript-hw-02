@@ -1,12 +1,7 @@
 .list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  width: 1360px;
-}
-
-.item {
-  width: calc((100% - 48px) / 4);
 }

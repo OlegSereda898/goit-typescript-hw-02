@@ -3,10 +3,14 @@ import toast from "react-hot-toast";
 import css from "./SearchBar.module.css";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
 
-function SearchBar({ onSubmit }) {
-  const [input, setInput] = useState("");
+interface SearchBarProps {
+  onSubmit: (query: string) => void;
+}
 
-  const handleSubmit = (e) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
+  const [input, setInput] = useState<string>("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!input.trim()) {
       toast.error("Please enter a search query");
@@ -29,11 +33,13 @@ function SearchBar({ onSubmit }) {
           autoFocus
           placeholder="Search images and photos"
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setInput(e.target.value)
+          }
         />
       </form>
     </header>
   );
-}
+};
 
 export default SearchBar;

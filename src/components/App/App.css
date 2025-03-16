@@ -1,7 +1,9 @@
 #root {
-  width: 1360px;
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 1360px; */
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: 32px;
   text-align: center;
 }
 
